@@ -1,6 +1,8 @@
 import Map, { Callout, Marker } from 'react-native-maps';
 import { Alert, Linking, Platform, StatusBar, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 
+import { styles } from './App.ts';
+
 export default function App() {
   const coordinate = {
     latitude: -23.561247393962343,
@@ -60,37 +62,4 @@ export default function App() {
       </TouchableOpacity>
     </View>
   );
-}
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
-  callout: {
-    padding: 12,
-  },
-  title: {
-    fontSize: 18,
-    fontWeight: 'bold',
-  },
-  address: {
-    fontSize: 14,
-  },
-  button: {
-    // flex: 1,
-    height: 56,
-    backgroundColor: '#000',
-    position: 'absolute',
-    bottom: 24,
-    left: 24,
-    right: 24,
-    borderRadius: 7,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  buttonTitle: {
-    color: '#FFF',
-    fontSize: 16,
-    fontWeight: 'bold',
-  }
-});
+};
