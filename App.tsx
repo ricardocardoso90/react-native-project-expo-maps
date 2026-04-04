@@ -1,7 +1,7 @@
-import Map, { Callout, Marker } from 'react-native-maps';
+import MapView, { Callout, Marker } from 'react-native-maps';
 import { Alert, Linking, Platform, StatusBar, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 
-import { styles } from './App.ts';
+import { styles } from './src/styles/styles';
 
 export default function App() {
   const coordinate = {
@@ -34,7 +34,7 @@ export default function App() {
   return (
     <View style={styles.container}>
       <StatusBar barStyle='light-content' />
-      <Map
+      <MapView
         style={StyleSheet.absoluteFill}
         initialRegion={{
           latitude: coordinate.latitude,
@@ -51,7 +51,7 @@ export default function App() {
             </View>
           </Callout>
         </Marker>
-      </Map>
+      </MapView>
 
       <TouchableOpacity
         activeOpacity={0.8}
